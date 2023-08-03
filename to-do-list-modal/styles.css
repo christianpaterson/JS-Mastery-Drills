@@ -48,8 +48,14 @@ label {
   font-size: 25px;
 }
 
-input:focus {
+input:focus,
+input:valid,
+input:-webkit-autofill {
   outline: none;
+  border: none;
+  border-radius: 2px;
+  background-color: #abd1c6;
+  color: #e16162;
 }
 
 input {
