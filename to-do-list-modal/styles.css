@@ -1,0 +1,103 @@
+body {
+  background-color: #004643;
+  margin: 20px;
+  font-family: "Cera Round Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #f9bc60;
+}
+
+button {
+  background-color: #abd1c6;
+  color: #e16162;
+  border: none;
+  border-radius: 2px;
+  padding: 10px;
+  font-size: 18px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.form-element:hover {
+  cursor: pointer;
+}
+
+label:hover {
+  cursor: pointer;
+}
+
+#open-modal-btn {
+  padding: 15px;
+  margin-left: -5px;
+}
+
+#close-modal-btn {
+  color: black;
+}
+
+.form-element {
+  width: 25%;
+  padding: 25px;
+  margin: 0 5px;
+  font-size: 22px;
+}
+
+label {
+  width: 25%;
+  padding: 25px;
+  font-size: 25px;
+}
+
+input:focus {
+  outline: none;
+}
+
+input {
+  border: none;
+  border-radius: 2px;
+  background-color: #abd1c6;
+  color: #e16162;
+}
+
+.list-item {
+  cursor: pointer;
+  padding: 0 15px;
+  font-size: 18px;
+}
+
+.list-item.hovered:hover {
+  color: red;
+  text-decoration: line-through;
+}
+
+#modal-section {
+  margin: 20px;
+}
+
+#modal {
+  display: none;
+  position: absolute;
+  height: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid black;
+  padding: 5rem;
+  border-radius: 0.25rem;
+  background-color: #004643;
+}
+
+#overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.completed-starter {
+  color: black;
+  font-size: 20px;
+}

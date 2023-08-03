@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>To-Do List Modal</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Cera+Round+Pro:400,700&display=swap"
+    />
+    <style>
+      #modal.open {
+        display: block;
+      }
+
+      #overlay.open {
+        display: block;
+      }
+    </style>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <form id="new-item-form">
+      <label for="item-input">New Item</label>
+      <input class="form-element" type="text" id="item-input" />
+      <button class="form-element" type="submit">Add Item</button>
+    </form>
+    <div id="list"></div>
+    <div id="modal-section">
+      <button id="open-modal-btn">View Completed Items</button>
+      <div id="overlay"></div>
+      <div id="modal">
+        <h5 class="completed-starter">You've already done</h5>
+        <div id="completed-items"><p id="default-item">...nothing yet</p></div>
+        <h5 class="completed-starter">today!</h5>
+        <button id="close-modal-btn">Close Modal</button>
+      </div>
+    </div>
+  </body>
+</html>
