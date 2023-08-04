@@ -13,6 +13,7 @@ form.addEventListener("submit", e => {
     let questionInputs = Array.from(question.querySelectorAll("input"));
     let isUnanswered = questionInputs.every(a => !a.checked);
     if (isUnanswered) markIncorrect(question);
+    // Could also just do markIncorrect(question);
   });
 
   selectedAnswers.forEach(answer => {
@@ -25,7 +26,10 @@ form.addEventListener("submit", e => {
   });
 
   if (correctResponses === NUMBER_OF_QUESTIONS) {
-    congrats.style.display = "block";
+    congrats.classList.add("active");
+    setTimeout(() => {
+      congrats.classList.remove("active");
+    }, 2500);
   }
 });
 
