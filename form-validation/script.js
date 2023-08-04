@@ -1,5 +1,5 @@
 const form = document.querySelector("#form");
-const errors = document.querySelector(".errors");
+const errorsContainers = document.querySelector(".errors");
 const checkbox = document.querySelector("#terms");
 const username = document.querySelector("#username");
 const password = document.querySelector("#password");
@@ -17,32 +17,31 @@ form.addEventListener("submit", e => {
     ];
 
     if (username.value.length < 6) {
-      showErrors(e, errorMessages[0]);
+      addErrors(e, errorMessages[0]);
     }
     if (password.value.length < 10) {
-      showErrors(e, errorMessages[1]);
+      addErrors(e, errorMessages[1]);
     }
     if (password.value !== passwordConfirmation.value) {
-      showErrors(e, errorMessages[2]);
+      addErrors(e, errorMessages[2]);
     }
-    if (checkbox.checked === false) {
-      showErrors(e, errorMessages[3]);
+    if (!checkbox.checked) {
+      addErrors(e, errorMessages[3]);
     }
   }
 });
 
 function clearErrors() {
-  errors.classList.remove(".show");
+  errorsContainers.classList.remove(".show");
   while (errorList.firstChild) {
     errorList.removeChild(errorList.firstChild);
   }
 }
 
-function showErrors(e, errorMessage) {
+function addErrors(e, errorMessage) {
   e.preventDefault();
-  errors.classList.add("show");
+  errorsContainers.classList.add("show");
   let error = document.createElement("li");
-  error.classList.add("error");
   error.innerHTML = errorMessage;
   errorList.appendChild(error);
 }
